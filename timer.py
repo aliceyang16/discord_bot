@@ -1,4 +1,3 @@
-# Pomodoro Timer Class
 import time
 
 class PomodoroTimer:
@@ -31,7 +30,3 @@ class PomodoroTimer:
 			time.sleep(1)
 			t -= 1
 		print("ALL DONE")
-
-
-# session = PomodoroTimer(5)
-# session.startTimer()
