@@ -7,13 +7,13 @@ class PomodoroTimer:
         self.time = 1500
         self.breakTime = 300
 
-    def setWorkTimer(self, time):
+    def setWorkTimer(self, time: int):
         self.time = time * 60
 
-    def setBreakTimer(self, time):
+    def setBreakTimer(self, time: int):
         self.breakTime = time * 60
 
-    def startWorkTimer(self):
+    def startWorkTimer(self) -> str:
         self.startTimer(self.time)
         message = (
             "Good work! Hope you were productive in the last "
@@ -22,7 +22,7 @@ class PomodoroTimer:
         )
         return message
 
-    def startBreakTimer(self):
+    def startBreakTimer(self) -> str:
         self.startTimer(self.breakTime)
         message = (
             "Hope you had a good "
@@ -31,7 +31,7 @@ class PomodoroTimer:
         )
         return message
 
-    def startTimer(self, t):
+    def startTimer(self, t) -> None:
         while t:
             mins, secs = divmod(t, 60)
             timer = "{:02d}:{:02d}".format(mins, secs)
