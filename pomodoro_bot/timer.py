@@ -2,7 +2,7 @@ import time
 
 
 class PomodoroTimer:
-    def __init__(self, time):
+    def __init__(self, time: int):
         # default 25 minutes working session and 5 minutes break
         self.time = 1500
         self.breakTime = 300
