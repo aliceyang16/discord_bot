@@ -1,6 +1,6 @@
 # Pomodoro Timer Bot
 
-## Environemnt Setup
+## Environment Setup
 Setup a virtual environemnt by running the following commands
 ````
 python3 -m venv env
