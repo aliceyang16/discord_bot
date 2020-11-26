@@ -16,7 +16,7 @@ setup(
     install_requires=required,
     version="0.0.1",
     author="Alice Yang",
-    python_requires=">=3.6",
+    python_requires=">=3.8",
     extras_require={
         "dev": [
             "bandit==1.6.2",
