@@ -8,11 +8,11 @@ class PomodoroTimer:
 		self.breakTime = 300
 
 	def setWorkTimer(self, time: int) -> None:
-		if time >= 0 || time <= 2:
+		if time >= 0 and time <= 2:
 			self.time = time * 60
 
 	def setBreakTimer(self, time: int) -> None:
-		if time >= 0 || time <= 2:
+		if time >= 0 and time <= 2:
 			self.breakTime = time * 60
 
 	def startWorkTimer(self):
