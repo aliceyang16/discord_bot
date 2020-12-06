@@ -2,11 +2,11 @@
 import threading
 import time
 
-exit_flag = False
+import vardata
 
 def runTimer(thread, counter: int):
 	while counter:
-		if exit_flag:
+		if vardata.exit_flag:
 			break
 		time.sleep(1)
 		print("%s: %s" %(thread.name, time.ctime(time.time())))
@@ -35,11 +35,12 @@ class FuncThread (threading.Thread):
 		print("Running break session for " + self.name)
 		runTimer(self, self.breakSession)
 		print("Exiting break session for " + self.name)
-		return "Hope you had a good " + str(int(self.breakSession / 60)) + " minutes break! :zany_face:"
+		#return "Hope you had a good " + str(int(self.breakSession / 60)) + " minutes break! :zany_face:"
 
 	def run(self):
 		self.runProductivity()
 		self.runBreak()
+
 
 # -------- testing --------------
 # thread1 = FuncThread("thread1")
